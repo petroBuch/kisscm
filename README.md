@@ -21,9 +21,9 @@ tar. Эмулятор должен работать в режиме CLI.
 2. cal.
 
 Для запуска программы выполнить команду:
-'''
+```
 python main.py <hostname> <virtual_file_system_directory> <log_file> <start_script_file>
-'''
+```
 Стандартные команды:
 * ls - выводит содержимое текущей папки,
 * cd <directory> - переход в указанную папку,
