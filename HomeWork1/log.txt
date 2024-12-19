@@ -1,0 +1,1 @@
+[{"command": "ls", "timestamp": "2024-12-19T22:52:07.848381"}, {"command": "cd", "timestamp": "2024-12-19T22:52:09.087818"}, {"command": "exit", "timestamp": "2024-12-19T22:53:33.672453"}]

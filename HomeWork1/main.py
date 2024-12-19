@@ -20,9 +20,9 @@ class SimpleShell:
 
     def load_vfs(self):
         with tarfile.open(self.vfs_path) as tar:
-            tar.extractall(path='vfs')
-        self.current_path = 'vfs/vfs'
-        self.root_path = 'vfs/vfs'
+            tar.extractall(path='/')
+        self.current_path = '/vfs'
+        self.root_path = '/vfs'
 
     def execute_startup_script(self, script_path):
         with open(script_path, 'r') as script:
@@ -49,8 +49,11 @@ class SimpleShell:
             sys.exit(0)
 
         elif command_line[0] == "cd":
-            path = command_line[1]
-            self.cd(path)
+            if len(command_line) > 1:
+                path = command_line[1]
+                self.cd(path)
+            else:
+                print("No such directory: ")
 
         elif command_line[0] == 'ls':
             self.ls()
@@ -76,7 +79,7 @@ class SimpleShell:
                 self.current_path = new_path
 
             else:
-                print(f"Directory not found: {path}")
+                print(f"No such directory: {path}")
 
     def ls(self):
         print("\n".join(os.listdir(self.current_path)))
