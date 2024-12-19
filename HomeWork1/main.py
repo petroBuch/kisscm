@@ -92,16 +92,12 @@ class SimpleShell:
                 self.tree(subpath, level + 1)
 
     def cal(self, command=[]):
-        print(len(command), command)
         if len(command) == 1:
-            print(1)
             now = datetime.now()
             print(calendar.month(now.year, now.month))
         elif len(command) == 2:
-            print(2)
             print(calendar.calendar(int(command[1])))
         elif len(command) == 3:
-            print(3)
             print(calendar.month(int(command[1]), int(command[2])))
 
 
