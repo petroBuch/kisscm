@@ -6,7 +6,11 @@ from datetime import datetime
 import tarfile
 
 
-class SimpleShell:
+__all__=[
+    "ShellEmulator"
+]
+
+class ShellEmulator:
     def __init__(self, hostname, vfs_path, log_file, startup_script):
         self.hostname = hostname
         self.current_path = ""
